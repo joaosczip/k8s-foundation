@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: sessao-pvc
+  name: images-pvc
 spec:
   accessModes:
     - ReadWriteOnce

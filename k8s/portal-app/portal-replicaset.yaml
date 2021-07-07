@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: portal-noticias-replicaset
+  name: portal-replicaset
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: portal-noticias
+      app: portal-app
   template:
     metadata:
-      name: portal-noticias
+      name: portal-app
       labels:
-        app: portal-noticias
+        app: portal-app
     spec:
       containers:
-        - name: portal-noticias-container
+        - name: portal-app-container
           image: aluracursos/portal-noticias:1
           ports:
             - containerPort: 80
