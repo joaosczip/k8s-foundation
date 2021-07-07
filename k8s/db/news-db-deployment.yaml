@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: db-noticias-deployment
+  name: news-db-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: db-noticias
+      app: news-db
   template:
     metadata:
-      name: db-noticias
+      name: news-db
       labels:
-        app: db-noticias
+        app: news-db
     spec:
       containers:
-        - name: db-noticias-container
+        - name: news-db-container
           image: aluracursos/mysql-db:1
           ports:
             - containerPort: 3306
